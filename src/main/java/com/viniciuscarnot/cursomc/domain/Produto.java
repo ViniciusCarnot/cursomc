@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,6 +26,7 @@ public class Produto implements Serializable {
 	private String nome;
 	private Double preco;
 	
+	@JsonBackReference
 	@ManyToMany
 	@JoinTable(name = "PRODUTO_CATEGORIA",
 		joinColumns = @JoinColumn(name = "produto_id"),
@@ -35,6 +38,8 @@ public class Produto implements Serializable {
 	// 1. nome (qualquer) da tabela entre o conceito de Produto e Categoria (paradigma relacional)
 	// 2. nome (qualquer) da chave estrangeira da classe em que estou (no caso Produto)
 	// 3. nome (qualquer) da outra chave estrangeira que irá referenciar a classe Categoria
+	
+	// @JsonBackReference serve para omitir a lista de categorias para cada Produto
 	
 	public Produto() {
 	}
