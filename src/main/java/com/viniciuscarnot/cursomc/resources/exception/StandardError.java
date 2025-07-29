@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 // classe auxiliar do ResourceExceptionHandler
 
-public class StandardError implements Serializable{
+public class StandardError implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
