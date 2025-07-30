@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.viniciuscarnot.cursomc.domain.enums.TipoCliente;
 
@@ -42,6 +43,7 @@ public class Cliente implements Serializable {
 	// @CollectionTable serve para criar uma tabela entre Cliente e Produto 
 	// no banco de dados
 	
+	@JsonBackReference
 	@OneToMany(mappedBy="cliente")
 	private List<Pedido> pedidos = new ArrayList<>();
 	
