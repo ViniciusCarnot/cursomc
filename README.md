@@ -60,7 +60,7 @@ End point : ``` localhost:8082/categorias/{id}```
 }
 ```
 
-- Recuperar dados do Cliente
+- Recuperar dados do Cliente, seus telefones e endereços
 
 End point : ``` localhost:8082/clientes/{id} ```
 
@@ -112,7 +112,7 @@ End point : ``` localhost:8082/clientes/{id} ```
 }
 ```
 
-- Recuperar dados do Pedido
+- Recuperar dados do Pedido (cliente, pagamento, itens do pedido, endereço de entrega)
 
 End point: ``` localhost:8082/pedidos/{id} ```
 
