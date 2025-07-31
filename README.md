@@ -24,8 +24,8 @@ sobre o paradigma orientado a objetos, usando padrões de mercado e boas prátic
 -----------------------------------------------------------------------------------------------
 
 ## Tecnologias Utilizadas
-- Java
-- Spring Boot
+- Java (17)
+- Spring Boot (3.5.4)
 - JPA / Hibernate
 - H2 (Banco de Dados )
 - Postman (teste de API)
