@@ -31,6 +31,182 @@ sobre o paradigma orientado a objetos, usando padrões de mercado e boas prátic
 - Postman (teste de API)
 - Maven
 
+-----------------------------------------------------------------------------------------------
+## Funcionalidades
+- Recuperar dados da Categoria e seus produtos
   
+End point : ``` localhost:8082/categorias/{id}```
+```json
+ {
+    "id": 1,
+    "nome": "Informática",
+    "produtos": [
+        {
+            "id": 1,
+            "nome": "Computador",
+            "preco": 2000.0
+        },
+        {
+            "id": 2,
+            "nome": "Impressora",
+            "preco": 800.0
+        },
+        {
+            "id": 3,
+            "nome": "Mouse",
+            "preco": 80.0
+        }
+    ]
+}
+```
 
- 
+- Recuperar dados do Cliente
+
+End point : ``` localhost:8082/clientes/{id} ```
+
+```json
+{
+    "id": 1,
+    "nome": "Maria Silva",
+    "email": "maria@gmail.com",
+    "cpfOuCnpj": "36378912377",
+    "tipo": "PESSOAFISICA",
+    "enderecos": [
+        {
+            "id": 1,
+            "logradouro": "Rua Flores",
+            "numero": "300",
+            "complemento": "Apto 303",
+            "bairro": "Jardim",
+            "cep": "38220834",
+            "cidade": {
+                "id": 1,
+                "nome": "Uberlândia",
+                "estado": {
+                    "id": 1,
+                    "nome": "Minas Gerais"
+                }
+            }
+        },
+        {
+            "id": 2,
+            "logradouro": "Avenida Matos",
+            "numero": "105",
+            "complemento": "Sala 800",
+            "bairro": "Centro",
+            "cep": "3877012",
+            "cidade": {
+                "id": 2,
+                "nome": "São Paulo",
+                "estado": {
+                    "id": 2,
+                    "nome": "São Paulo"
+                }
+            }
+        }
+    ],
+    "telefones": [
+        "27363323",
+        "93838993"
+    ]
+}
+```
+
+- Recuperar dados do Pedido
+
+End point: ``` localhost:8082/pedidos/{id} ```
+
+```json
+{
+    "id": 1,
+    "instante": "30/09/2017 01:32",
+    "pagamento": {
+        "id": 1,
+        "estado": "QUITADO",
+        "numeroDeParcelas": 6
+    },
+    "cliente": {
+        "id": 1,
+        "nome": "Maria Silva",
+        "email": "maria@gmail.com",
+        "cpfOuCnpj": "36378912377",
+        "tipo": "PESSOAFISICA",
+        "enderecos": [
+            {
+                "id": 1,
+                "logradouro": "Rua Flores",
+                "numero": "300",
+                "complemento": "Apto 303",
+                "bairro": "Jardim",
+                "cep": "38220834",
+                "cidade": {
+                    "id": 1,
+                    "nome": "Uberlândia",
+                    "estado": {
+                        "id": 1,
+                        "nome": "Minas Gerais"
+                    }
+                }
+            },
+            {
+                "id": 2,
+                "logradouro": "Avenida Matos",
+                "numero": "105",
+                "complemento": "Sala 800",
+                "bairro": "Centro",
+                "cep": "3877012",
+                "cidade": {
+                    "id": 2,
+                    "nome": "São Paulo",
+                    "estado": {
+                        "id": 2,
+                        "nome": "São Paulo"
+                    }
+                }
+            }
+        ],
+        "telefones": [
+            "27363323",
+            "93838993"
+        ]
+    },
+    "enderecoDeEntrega": {
+        "id": 1,
+        "logradouro": "Rua Flores",
+        "numero": "300",
+        "complemento": "Apto 303",
+        "bairro": "Jardim",
+        "cep": "38220834",
+        "cidade": {
+            "id": 1,
+            "nome": "Uberlândia",
+            "estado": {
+                "id": 1,
+                "nome": "Minas Gerais"
+            }
+        }
+    },
+    "itens": [
+        {
+            "desconto": 0.0,
+            "quantidade": 1,
+            "preco": 2000.0,
+            "produto": {
+                "id": 1,
+                "nome": "Computador",
+                "preco": 2000.0
+            }
+        },
+        {
+            "desconto": 0.0,
+            "quantidade": 2,
+            "preco": 80.0,
+            "produto": {
+                "id": 3,
+                "nome": "Mouse",
+                "preco": 80.0
+            }
+        }
+    ]
+}
+```
